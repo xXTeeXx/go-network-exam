@@ -2,23 +2,30 @@ package main
 
 import "fmt"
 
-
 func main() {
-	// Got Username and Password from keyboard
+	// รับข้อมูล Username และ Password จากคีย์บอร์ด
 	var username string
 	var password string
 
-	fmt.Print("Username: ")
+	fmt.Print("ชื่อผู้ใช้: ")
 	fmt.Scanln(&username)
-	fmt.Print("Password: ")
+	fmt.Print("รหัสผ่าน: ")
 	fmt.Scanln(&password)
-	// Call function LogIn
 
+	// เรียกใช้ฟังก์ชัน LogIn
 	LogIn(username, password)
+
+	// ตัวอย่างการใช้งานฟังก์ชัน Add และ Minus
+	resultAdd := Add(5, 3)
+	resultMinus := Minus(8, 3)
+
+	// พิมพ์ผลลัพธ์
+	fmt.Printf("ผลบวก: %d\n", resultAdd)
+	fmt.Printf("ผลลบ: %d\n", resultMinus)
 }
 
 func HelloFunction() string {
-	return "Hello"
+	return "สวัสดี"
 }
 
 func Add(a int, b int) int {
@@ -37,11 +44,11 @@ func UserLogin(username string, password string) bool {
 	}
 }
 
-// Use function UserLogin
+// ใช้งานฟังก์ชัน UserLogin
 func LogIn(username string, password string) {
 	if UserLogin(username, password) {
-		fmt.Println("Login successful")
+		fmt.Println("เข้าสู่ระบบสำเร็จ")
 	} else {
-		fmt.Println("Login failed")
+		fmt.Println("เข้าสู่ระบบล้มเหลว")
 	}
 }
