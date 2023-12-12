@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// รับข้อมูล Username และ Password จากคีย์บอร์ด
+	
 	var username string
 	var password string
 
@@ -12,14 +12,14 @@ func main() {
 	fmt.Print("รหัสผ่าน: ")
 	fmt.Scanln(&password)
 
-	// เรียกใช้ฟังก์ชัน LogIn
+	
 	LogIn(username, password)
 
-	// ตัวอย่างการใช้งานฟังก์ชัน Add และ Minus
+	
 	resultAdd := Add(5, 3)
 	resultMinus := Minus(8, 3)
 
-	// พิมพ์ผลลัพธ์
+	
 	fmt.Printf("ผลบวก: %d\n", resultAdd)
 	fmt.Printf("ผลลบ: %d\n", resultMinus)
 }
